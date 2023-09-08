@@ -1,0 +1,48 @@
+.register {
+  width: 100vw;
+  height: 95vh;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.reg-form {
+  width: 500px;
+  height: 600px;
+  background-color: rgb(255, 151, 151);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 10px;
+}
+.reg-input {
+  outline: none;
+  border-bottom: 1px solid black;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  width: 300px;
+  height: 30px;
+  background-color: transparent;
+}
+.reg-input::placeholder {
+  color: black;
+  letter-spacing: 1px;
+}
+.reg-bt {
+  outline: none;
+  border: none;
+  padding: 5px 25px;
+  border-radius: 4px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  background-color: aliceblue;
+  color: black;
+}
+.reg-link {
+  color: black;
+  letter-spacing: 1px;
+  cursor: pointer;
+}

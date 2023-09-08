@@ -5,7 +5,7 @@ import { toast } from "react-hot-toast";
 import { useEffect } from "react";
 import Todoitems from "../components/Todoitems";
 import { Navigate } from "react-router-dom";
-
+import "../styles/todo.css";
 const Home = () => {
   const [title, settitle] = useState("");
   const [description, setdesc] = useState("");
@@ -89,12 +89,13 @@ const Home = () => {
 
   return (
     <div className="container-home">
-      <form onSubmit={submitHandler}>
+      <form onSubmit={submitHandler} className="home-form">
         <input
           type="text"
           placeholder="Enter Title"
           value={title}
           onChange={(e) => settitle(e.target.value)}
+          className="todo-input"
         />
         <br />
 
@@ -103,10 +104,11 @@ const Home = () => {
           placeholder="Enter Description"
           value={description}
           onChange={(e) => setdesc(e.target.value)}
+          className="todo-input"
         />
 
         <br />
-        <button disabled={loading} type="submit">
+        <button disabled={loading} type="submit" className="todo-bt">
           Create Task
         </button>
       </form>

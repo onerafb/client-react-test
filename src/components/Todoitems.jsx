@@ -1,5 +1,5 @@
 import React from "react";
-
+import "../styles/todo.css";
 const Todoitems = ({
   title,
   description,
@@ -16,7 +16,7 @@ const Todoitems = ({
       </div>
       <div>
         <input type="checkbox" checked={isCompleted} onChange={()=>updateHandler(id)} />
-        <button onClick={()=>deleteHandler(id)}>Delete</button>
+        <button onClick={()=>deleteHandler(id)} className="todo-bt">Delete</button>
       </div>
     </div>
   );

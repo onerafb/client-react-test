@@ -3,6 +3,7 @@ import { Link, Navigate } from "react-router-dom";
 import { Context, server } from "../main";
 import axios from "axios";
 import toast from "react-hot-toast";
+import "../styles/register.css"
 const Register = () => {
   const [name, setname] = useState("");
   const [email, setemail] = useState("");
@@ -43,12 +44,13 @@ const Register = () => {
 
   return (
     <div className="register">
-      <form onSubmit={submitHandler}>
+      <form onSubmit={submitHandler} className="reg-form">
         <input
           value={name}
           type="text"
           placeholder="Name"
           onChange={(e) => setname(e.target.value)}
+          className="reg-input"
         />
         <br />
 
@@ -57,6 +59,7 @@ const Register = () => {
           placeholder="Email"
           value={email}
           onChange={(e) => setemail(e.target.value)}
+          className="reg-input"
         />
         <br />
 
@@ -65,14 +68,15 @@ const Register = () => {
           placeholder="Password"
           value={password}
           onChange={(e) => setpassword(e.target.value)}
+          className="reg-input"
         />
         <br />
 
-        <button disabled={loading} type="submit">
+        <button disabled={loading} type="submit" className="reg-bt">
           Sign Up
         </button>
         <h4>Or</h4>
-        <Link to="/login">Log In</Link>
+        <Link to="/login" className="reg-link">Log In</Link>
       </form>
     </div>
   );

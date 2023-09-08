@@ -3,6 +3,7 @@ import { Link, Navigate } from "react-router-dom";
 import { Context, server } from "../main";
 import axios from "axios";
 import { toast } from "react-hot-toast";
+import "../styles/login.css";
 const Login = () => {
   const [password, setpassword] = useState("");
   const [email, setemail] = useState("");
@@ -41,8 +42,9 @@ const Login = () => {
   }
   return (
     <div className="login">
-      <form onSubmit={submitHandler}>
+      <form onSubmit={submitHandler} className="login-form">
         <input
+          className="login-input"
           type="email"
           placeholder="Email"
           value={email}
@@ -51,17 +53,18 @@ const Login = () => {
         <br />
 
         <input
+          className="login-input"
           type="password"
           placeholder="Password"
           value={password}
           onChange={(e) => setpassword(e.target.value)}
         />
         <br />
-        <button disabled={loading} type="submit">
+        <button disabled={loading} type="submit" className="login-bt">
           Login
         </button>
         <h4>Or</h4>
-        <Link to="/register">Sign Up</Link>
+        <Link to="/register" className="login-link">Sign Up</Link>
       </form>
     </div>
   );

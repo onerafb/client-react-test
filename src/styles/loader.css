@@ -1,0 +1,15 @@
+.loader {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(78, 76, 76);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+}
+.loader > h2 {
+  color: aliceblue;
+  letter-spacing: 4px;
+  font-size: 20px;
+}

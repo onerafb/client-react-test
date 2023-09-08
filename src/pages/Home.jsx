@@ -111,9 +111,7 @@ const Home = () => {
         <button disabled={loading} type="submit" className="todo-bt">
           Create Task
         </button>
-      </form>
-
-      <div className="todo-container">
+          <div className="todo-container">
         {tasks.map((i) => (
           <div key={i._id}>
             <Todoitems
@@ -127,6 +125,7 @@ const Home = () => {
           </div>
         ))}
       </div>
+      </form>
     </div>
   );
 };
